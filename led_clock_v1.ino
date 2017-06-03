@@ -83,7 +83,7 @@ void showLedClock()
 
 void changeTime(bool isHour)
 {
-  FastLED.show();rel
+  FastLED.show();
   delay(1000);  
   if (isHour) {
     turnOffLedsHour();
@@ -94,7 +94,7 @@ void changeTime(bool isHour)
 
 void turnOffLedsHour()
 {
-  for (int i = 0; i < 11; i++) {
+  for (int i = 0; i <= 11; i++) {
     leds[i] = CRGB::Black;
   }  
   FastLED.show();
@@ -102,7 +102,7 @@ void turnOffLedsHour()
 
 void turnOffLedsMinutes()
 {
-  for (int i = 12; i < 23; i++) {
+  for (int i = 12; i <= 23; i++) {
     leds[i] = CRGB::Black;
   }  
   FastLED.show();  
